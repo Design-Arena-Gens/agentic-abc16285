@@ -1,0 +1,73 @@
+/* Basic, readable defaults */
+:root {
+  --bg: #fffefb;
+  --text: #182026;
+  --muted: #5c7080;
+  --accent: #ffcf4a;
+  --accent-2: #ffd86b;
+  --border: #e1e8ed;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+.site-header {
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: #1f2a44;
+  border-bottom: 1px solid var(--border);
+}
+.site-header h1 { margin: 0; padding-top: 24px; }
+.site-header .tagline { margin: 8px 0 16px; color: #2f3b57; }
+
+.content { padding: 32px 0 48px; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(16,24,40,0.06);
+}
+.card h3 { margin-top: 0; }
+.card a { color: #1e40af; text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #e0e7ff;
+}
+
+.recipe header { margin-bottom: 16px; }
+.recipe .meta { color: var(--muted); font-size: 14px; }
+.recipe .two-col { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; }
+.recipe h2 { margin-bottom: 8px; }
+.recipe ul { padding-left: 20px; }
+.recipe li { margin-bottom: 6px; }
+
+.section { margin-top: 24px; }
+
+.site-footer {
+  padding: 16px 0 32px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
